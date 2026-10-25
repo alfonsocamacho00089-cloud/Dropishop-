@@ -631,7 +631,7 @@ async function cargarTasas() {
 // 1. Cambiamos dataB.binance por dataB.binance_p2p
 if (dataB && dataB.binance_p2p) {
     // 2. Usamos Math.max para obtener el precio más alto de ventas_sell
-    const nuevoP2P = Math.max(...Object.values(dataB.binance_p2p.ventas_sell)) || 0;
+    const nuevoP2P = Math.max(...Object.values(dataB.binance_p2p.compras_buy)) || 0;
         
             const anteriorP2P = parseFloat(localStorage.getItem("res_p2p_hoy")) || 0;
 
